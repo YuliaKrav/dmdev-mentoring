@@ -41,15 +41,15 @@ public class Task3 {
         }
     }
 
-    public static boolean isValidSide(int side) {
+   private static boolean isValidSide(int side) {
         return side > 0;
     }
 
-    public static double calculateRightTriangleArea(int side1, int side2) {
+    private static double calculateRightTriangleArea(int side1, int side2) {
         return 0.5 * side1 * side2;
     }
 
-    public static void compareTriangleAreas(double area1, double area2) {
+    private static void compareTriangleAreas(double area1, double area2) {
         if (Math.abs(area1 - area2) < EPSILON) {
             System.out.printf("The areas of two triangles are equal. %.3f = %.3f\n", area1, area2);
         } else if (area1 > area2) {

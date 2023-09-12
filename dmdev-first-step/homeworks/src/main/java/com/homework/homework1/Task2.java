@@ -52,7 +52,7 @@ public class Task2 {
         printOperationResult(operand1, operand2, operation);
     }
 
-    public static double calculateMathOperation(double operand1, double operand2, char operation) {
+    private static double calculateMathOperation(double operand1, double operand2, char operation) {
         return switch (operation) {
             case ADD -> add(operand1, operand2);
             case SUBTRACT -> subtract(operand1, operand2);
@@ -66,19 +66,19 @@ public class Task2 {
         };
     }
 
-    public static double add(double operand1, double operand2) {
+    private static double add(double operand1, double operand2) {
         return operand1 + operand2;
     }
 
-    public static double subtract(double operand1, double operand2) {
+    private static double subtract(double operand1, double operand2) {
         return operand1 - operand2;
     }
 
-    public static double multiply(double operand1, double operand2) {
+    private static double multiply(double operand1, double operand2) {
         return operand1 * operand2;
     }
 
-    public static double divide(double operand1, double operand2) {
+    private static double divide(double operand1, double operand2) {
         if (operand2 == 0) {
             System.out.print("Cannot divide by zero ");
             return Double.NaN;
@@ -86,7 +86,7 @@ public class Task2 {
         return operand1 / operand2;
     }
 
-    public static double calculateModulo(double operand1, double operand2) {
+    private static double calculateModulo(double operand1, double operand2) {
         if (operand2 == 0) {
             System.out.print("Cannot calculate modulo with divisor = 0 ");
             return Double.NaN;
@@ -94,7 +94,7 @@ public class Task2 {
         return operand1 % operand2;
     }
 
-    public static void printOperationResult(double operand1, double operand2, char operation) {
+    private static void printOperationResult(double operand1, double operand2, char operation) {
         System.out.printf("%.3f %s %.3f = %.3f\n", operand1, operation, operand2, calculateMathOperation(operand1, operand2, operation));
     }
 }

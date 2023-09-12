@@ -25,8 +25,9 @@ public class Task1 {
         printMinutesQuarter(47);
     }
 
-    public static void printMinutesQuarter(int minutes) {
-        String prefixMinutes = "Minutes: " + minutes + " - ";
+    private static void printMinutesQuarter(int minutes) {
+        //String prefixMinutes = "Minutes: " + minutes + " - ";
+        String prefixMinutes = String.format("Minutes: %s ", minutes);
 
         if (minutes < 0) {
             System.out.println(prefixMinutes + "negative minutes value is not allowed");
